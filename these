@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submarine With a Leak</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Center the submarine in the page */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #eef;
+    }
+
+    .submarine {
+      position: relative;
+      width: 200px;
+      height: 100px;
+    }
+
+    /* Submarine body as an ellipse */
+    .body {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 200px;
+      height: 60px;
+      background: gray;
+      border-radius: 100px / 30px; /* creates an elliptical shape */
+    }
+
+    /* Conning tower on top */
+    .conning-tower {
+      position: absolute;
+      top: 0;
+      left: 80px;
+      width: 40px;
+      height: 30px;
+      background: gray;
+      border-radius: 5px;
+    }
+
+    /* Periscope above the conning tower */
+    .periscope {
+      position: absolute;
+      top: -20px;
+      left: 95px;
+      width: 10px;
+      height: 20px;
+      background: gray;
+      border-radius: 3px;
+    }
+
+    /* Small fin or rudder at the back, optional */
+    .rudder {
+      position: absolute;
+      top: 30px;
+      right: -10px;
+      width: 20px;
+      height: 40px;
+      background: gray;
+      border-radius: 0 5px 5px 0;
+    }
+
+    /* Leak: a small water droplet animating downward */
+    .leak {
+      position: absolute;
+      top: 50px;
+      left: 190px; /* near the submarine's right edge */
+      width: 10px;
+      height: 10px;
+      background: lightblue;
+      border-radius: 50%;
+      animation: drip 1.2s infinite;
+    }
+
+    /* Keyframe for the dripping effect */
+    @keyframes drip {
+      0%   { top: 50px;  opacity: 1; }
+      70%  { top: 80px;  opacity: 1; }
+      100% { top: 100px; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="submarine">
+  <div class="body"></div>
+  <div class="conning-tower"></div>
+  <div class="periscope"></div>
+  <div class="rudder"></div>
+  <div class="leak"></div>
+</div>
+
+</body>
+</html>
