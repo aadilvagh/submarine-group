@@ -69,24 +69,6 @@
       border-radius: 0 5px 5px 0;
     }
 
-    /* Leak: a small water droplet animating downward */
-    .leak {
-      position: absolute;
-      top: 50px;
-      left: 190px; /* near the submarine's right edge */
-      width: 10px;
-      height: 10px;
-      background: lightblue;
-      border-radius: 50%;
-      animation: drip 1.2s infinite;
-    }
-
-    /* Keyframe for the dripping effect */
-    @keyframes drip {
-      0%   { top: 50px;  opacity: 1; }
-      70%  { top: 80px;  opacity: 1; }
-      100% { top: 100px; opacity: 0; }
-    }
   </style>
 </head>
 <body>
